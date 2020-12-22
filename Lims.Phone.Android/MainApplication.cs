@@ -8,7 +8,7 @@ namespace Lims.Phone.Droid
 #if DEBUG
     [Application(Debuggable = true)]
 #else
-        [Application(Debuggable = false)]
+    [Application(Debuggable = false)]
 #endif
     public class MainApplication : ShinyAndroidApplication<ShinyAppStartup>
     {

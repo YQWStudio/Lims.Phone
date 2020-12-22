@@ -172,7 +172,7 @@ namespace Lims.Phone.Services.Printer
             if (!peripheral.IsConnected())
                 peripheral.Connect();
 
-            peripheral.RequestMtu(512);
+            //peripheral.RequestMtu(512);
             _perifDisposable = peripheral.WhenAnyCharacteristicDiscovered().Subscribe((characteristic) =>
             {
                 if (characteristic.CanWrite() && !characteristic.CanRead() && !characteristic.CanNotify())

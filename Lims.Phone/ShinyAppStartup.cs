@@ -3,7 +3,7 @@ using Shiny;
 
 namespace Lims.Phone
 {
-    public class ShinyAppStartup : Shiny.ShinyStartup
+    public class ShinyAppStartup : ShinyStartup
     {
         public override void ConfigureServices(IServiceCollection services)
         {
