@@ -1,4 +1,5 @@
-﻿using Lims.Phone.ViewModels;
+﻿using Lims.Phone.Services;
+using Lims.Phone.ViewModels;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -12,18 +13,6 @@ namespace Lims.Phone.Views
             InitializeComponent();
 
             BindingContext = new PrintManagerPageViewModel();
-        }
-
-        private void Button_Clicked(object sender, System.EventArgs e)
-        {
-            Services.BlueToothPrinter.GetDeviceList();
-
-            PrintManagerPageViewModel vmodel = (PrintManagerPageViewModel)this.BindingContext;
-            vmodel.IsScanning = Services.BlueToothPrinter.IsScanning;
-            if(vmodel.IsScanning)
-            { 
-                vmodel.Peripherals = Services.BlueToothPrinter.Peripherals;
-            }
         }
     }
 }
