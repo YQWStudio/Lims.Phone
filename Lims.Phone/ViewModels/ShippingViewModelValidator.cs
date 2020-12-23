@@ -7,6 +7,9 @@ namespace Lims.Phone.ViewModels
 {
     public class ShippingViewModelValidator : AbstractValidator<ShippingViewModel>
     {
+        /// <summary>
+        /// 发货运单ViewModel数据校验
+        /// </summary>
         public ShippingViewModelValidator()
         {
             //收货人电话不能为空或不符合格式
@@ -59,7 +62,8 @@ namespace Lims.Phone.ViewModels
             //运费字段检查
             RuleFor(item => item.FreightRates)
                 .NotNull().WithMessage("运费不能为零，请检查！！！")
-                .NotEmpty().WithMessage("运费不能为零，请检查！！！");
+                .NotEmpty().WithMessage("运费不能为零，请检查！！！")
+                .Matches("^[0-9]+(.[0-9]{2})?$").WithMessage("只能输入数字及小数点，请检查");
 
             //付款方式检查
             /*

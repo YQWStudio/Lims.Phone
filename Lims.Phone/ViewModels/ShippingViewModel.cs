@@ -135,11 +135,11 @@ namespace Lims.Phone.ViewModels
             }
         }
 
-        private decimal _freightrates;
+        private string _freightrates;
         /// <summary>
         /// 运费
         /// </summary>
-        public decimal FreightRates
+        public string FreightRates
         {
             get { return _freightrates; }
             set
