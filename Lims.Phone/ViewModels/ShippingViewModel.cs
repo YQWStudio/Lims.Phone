@@ -1,9 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using Lims.Phone.Services;
+using System;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
-using System.Text;
-using Lims.Phone.Services;
 
 namespace Lims.Phone.ViewModels
 {
