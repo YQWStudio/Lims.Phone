@@ -150,15 +150,12 @@ namespace Lims.Phone.ViewModels
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
         }
 
-        IDisposable _scanDisposable, _connectedDisposable = null;
+        /*IDisposable _scanDisposable, _connectedDisposable = null;*/
         IBleManager _centralManager = Shiny.ShinyHost.Resolve<IBleManager>();
 
         public MainPageViewModel()
         {
             tapCommand = new Command(OnTapped);
-            var tt = "1234";
-            if (BlueToothPrinter.SelectedPeripheral == null)
-                tt = "3456";
 
             GetDeviceListCommand = new Command(BlueToothPrinter.GetDeviceList);
             SetAdapterCommand = new Command(async () => await BlueToothPrinter.SetAdapter());
